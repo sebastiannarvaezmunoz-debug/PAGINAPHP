@@ -8,27 +8,92 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Tecnología Sureña</title>
+    <title>Honda Motors - Vehículos</title>
 
     <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero-img {
+            height: 600px;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .honda-red {
+            background-color: #cc0000;
+        }
+
+        .text-honda {
+            color: #cc0000;
+        }
+
+        .btn-honda {
+            background-color: #cc0000;
+            color: white;
+            border: none;
+        }
+
+        .btn-honda:hover {
+            background-color: #990000;
+            color: white;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #cc0000;
+            margin: 10px auto;
+        }
+
+        .vehicle-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+        }
+
+        footer {
+            border-top: 4px solid #cc0000;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
 
-    <!-- Barra de navegación -->
+    <!-- ============================= -->
+    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- ============================= -->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
         <div class="container">
 
-            <!-- Nombre de la página -->
-            <a class="navbar-brand fw-bold" href="#">
-                💻 Tecnología Sureña 🖱️
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                🚗 HONDA MOTORS
             </a>
 
-            <!-- Botón para dispositivos móviles -->
             <button
                 class="navbar-toggler"
                 type="button"
@@ -41,11 +106,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Opciones del menú -->
             <div
                 class="collapse navbar-collapse"
                 id="menuPrincipal"
             >
+
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
@@ -55,14 +120,14 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#categorias">
-                            Categorías
+                        <a class="nav-link" href="#modelos">
+                            Modelos
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#productos">
-                            Productos
+                        <a class="nav-link" href="#vehiculos">
+                            Vehículos
                         </a>
                     </li>
 
@@ -79,89 +144,189 @@
                     </li>
 
                 </ul>
+
             </div>
+
         </div>
+
     </nav>
 
 
-    <!-- Sección de bienvenida -->
-    <header
-        id="inicio"
-        class="bg-dark text-white"
-    >
+    <!-- ============================= -->
+    <!-- CARRUSEL PRINCIPAL -->
+    <!-- ============================= -->
 
-        <!-- TU CARRUSEL -->
-        <div id="carouselExampleCaptions" class="carousel slide">
+    <header id="inicio">
+
+        <div
+            id="carouselHonda"
+            class="carousel slide"
+            data-bs-ride="carousel"
+        >
 
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselHonda"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                ></button>
 
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselHonda"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                ></button>
+
+                <button
+                    type="button"
+                    data-bs-target="#carouselHonda"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                ></button>
+
             </div>
+
 
             <div class="carousel-inner">
 
+                <!-- Slide 1 -->
+
                 <div class="carousel-item active">
+
                     <img
-                        src="https://www.elespectador.com/resizer/kleLiMLR6HJxMOXEbBDvoRAJ6bQ=/arc-anglerfish-arc2-prod-elespectador/public/MLK7W37IHFECFCJ6HVW4ZT2LAI.jpg"
-                        class="d-block w-100"
-                        alt="Computadores"
+                        src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1600&q=80"
+                        class="d-block w-100 hero-img"
+                        alt="Honda Civic"
                     >
 
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>COMPUTADORES ÚLTIMA TECNOLOGÍA</h5>
-                        <p>Distribuidores directos y precios especiales.</p>
+                    <div class="carousel-caption">
+
+                        <h1 class="display-4 fw-bold">
+                            HONDA CIVIC
+                        </h1>
+
+                        <p class="fs-5">
+                            Diseño, tecnología y rendimiento.
+                        </p>
+
+                        <a
+                            href="#vehiculos"
+                            class="btn btn-danger btn-lg"
+                        >
+                            Ver vehículo
+                        </a>
+
                     </div>
+
                 </div>
 
+
+                <!-- Slide 2 -->
+
                 <div class="carousel-item">
+
                     <img
-                        src="https://www.digittecnic.com/wp-content/uploads/2024/10/Red-White-and-Black-Bold-Modern-Youtube-Thumbnail-5.png"
-                        class="d-block w-100"
-                        alt="Cámaras de seguridad"
+                        src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1600&q=80"
+                        class="d-block w-100 hero-img"
+                        alt="Honda SUV"
                     >
 
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>CÁMARAS DE SEGURIDAD</h5>
-                        <p>Protege tu hogar o negocio con nuestros equipos.</p>
+                    <div class="carousel-caption">
+
+                        <h2 class="display-4 fw-bold">
+                            HONDA SUV
+                        </h2>
+
+                        <p class="fs-5">
+                            Espacio, seguridad y comodidad para toda la familia.
+                        </p>
+
+                        <a
+                            href="#vehiculos"
+                            class="btn btn-danger btn-lg"
+                        >
+                            Conocer modelos
+                        </a>
+
                     </div>
+
                 </div>
 
+
+                <!-- Slide 3 -->
+
                 <div class="carousel-item">
+
                     <img
-                        src="https://www.eogsa.com/wp-content/uploads/2016/07/maxresdefault-1080x675.jpg"
-                        class="d-block w-100"
-                        alt="Impresoras"
+                        src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80"
+                        class="d-block w-100 hero-img"
+                        alt="Honda deportivo"
                     >
 
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>IMPRESORAS</h5>
-                        <p>Todo tipo de impresoras y scanners.</p>
+                    <div class="carousel-caption">
+
+                        <h2 class="display-4 fw-bold">
+                            POTENCIA HONDA
+                        </h2>
+
+                        <p class="fs-5">
+                            Vive la experiencia de conducir un Honda.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="btn btn-danger btn-lg"
+                        >
+                            Solicitar información
+                        </a>
+
                     </div>
+
                 </div>
 
             </div>
+
 
             <button
                 class="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselExampleCaptions"
+                data-bs-target="#carouselHonda"
                 data-bs-slide="prev"
             >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
+
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="visually-hidden">
+                    Anterior
+                </span>
+
             </button>
+
 
             <button
                 class="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselExampleCaptions"
+                data-bs-target="#carouselHonda"
                 data-bs-slide="next"
             >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
+
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="visually-hidden">
+                    Siguiente
+                </span>
+
             </button>
 
         </div>
@@ -169,57 +334,80 @@
     </header>
 
 
-    <!-- Mensaje de promoción -->
+    <!-- ============================= -->
+    <!-- PROMOCIÓN -->
+    <!-- ============================= -->
+
     <div class="container mt-4">
 
-        <div class="alert alert-success text-center shadow-sm" role="alert">
-            <strong>🔥 Oferta especial:</strong>
-            Aprovecha nuestros descuentos en productos de tecnología.
+        <div
+            class="alert alert-danger text-center shadow-sm"
+            role="alert"
+        >
+
+            <strong>🔥 Oferta especial Honda:</strong>
+
+            Pregunta por nuestros planes de financiación
+            y vehículos disponibles.
+
         </div>
 
     </div>
 
 
-    <!-- Categorías -->
-    <section id="categorias" class="py-5">
+    <!-- ============================= -->
+    <!-- MODELOS -->
+    <!-- ============================= -->
+
+    <section
+        id="modelos"
+        class="py-5"
+    >
 
         <div class="container">
 
-            <div class="text-center mb-4">
+            <div class="text-center mb-5">
 
-                <h2 class="fw-bold">
-                    Categorías
+                <h2 class="fw-bold section-title">
+                    Modelos Honda
                 </h2>
 
                 <p class="text-secondary">
-                    Encuentra los productos que necesitas.
+                    Encuentra el vehículo ideal para ti.
                 </p>
 
             </div>
 
+
             <div class="row g-4">
 
-                <!-- Categoría 1 -->
+                <!-- Sedanes -->
+
                 <div class="col-md-3">
 
-                    <div class="card text-center h-100 shadow-sm border-0">
+                    <div
+                        class="card text-center h-100 shadow-sm border-0"
+                    >
 
                         <div class="card-body">
 
-                            <div class="display-4">
-                                💻
+                            <div class="display-3">
+                                🚘
                             </div>
 
                             <h3 class="h5 mt-3">
-                                Computadores
+                                Sedanes
                             </h3>
 
                             <p class="text-secondary">
-                                Portátiles y computadores para trabajo y estudio.
+                                Elegancia, comodidad y excelente rendimiento.
                             </p>
 
-                            <a href="#productos" class="btn btn-outline-dark">
-                                Ver productos
+                            <a
+                                href="#vehiculos"
+                                class="btn btn-outline-danger"
+                            >
+                                Ver modelos
                             </a>
 
                         </div>
@@ -229,27 +417,33 @@
                 </div>
 
 
-                <!-- Categoría 2 -->
+                <!-- SUV -->
+
                 <div class="col-md-3">
 
-                    <div class="card text-center h-100 shadow-sm border-0">
+                    <div
+                        class="card text-center h-100 shadow-sm border-0"
+                    >
 
                         <div class="card-body">
 
-                            <div class="display-4">
-                                🖱️
+                            <div class="display-3">
+                                🚙
                             </div>
 
                             <h3 class="h5 mt-3">
-                                Accesorios
+                                SUV
                             </h3>
 
                             <p class="text-secondary">
-                                Mouse, teclados, diademas y más.
+                                Espacio y versatilidad para cualquier aventura.
                             </p>
 
-                            <a href="#productos" class="btn btn-outline-dark">
-                                Ver productos
+                            <a
+                                href="#vehiculos"
+                                class="btn btn-outline-danger"
+                            >
+                                Ver modelos
                             </a>
 
                         </div>
@@ -259,27 +453,33 @@
                 </div>
 
 
-                <!-- Categoría 3 -->
+                <!-- Híbridos -->
+
                 <div class="col-md-3">
 
-                    <div class="card text-center h-100 shadow-sm border-0">
+                    <div
+                        class="card text-center h-100 shadow-sm border-0"
+                    >
 
                         <div class="card-body">
 
-                            <div class="display-4">
-                                📹
+                            <div class="display-3">
+                                🔋
                             </div>
 
                             <h3 class="h5 mt-3">
-                                Seguridad
+                                Híbridos
                             </h3>
 
                             <p class="text-secondary">
-                                Cámaras y equipos de vigilancia.
+                                Tecnología eficiente y menor consumo.
                             </p>
 
-                            <a href="#productos" class="btn btn-outline-dark">
-                                Ver productos
+                            <a
+                                href="#vehiculos"
+                                class="btn btn-outline-danger"
+                            >
+                                Ver modelos
                             </a>
 
                         </div>
@@ -289,27 +489,33 @@
                 </div>
 
 
-                <!-- Categoría 4 -->
+                <!-- Deportivos -->
+
                 <div class="col-md-3">
 
-                    <div class="card text-center h-100 shadow-sm border-0">
+                    <div
+                        class="card text-center h-100 shadow-sm border-0"
+                    >
 
                         <div class="card-body">
 
-                            <div class="display-4">
-                                🖨️
+                            <div class="display-3">
+                                🏎️
                             </div>
 
                             <h3 class="h5 mt-3">
-                                Impresoras
+                                Deportivos
                             </h3>
 
                             <p class="text-secondary">
-                                Impresoras y scanners para tu hogar o negocio.
+                                Potencia, diseño y emoción al conducir.
                             </p>
 
-                            <a href="#productos" class="btn btn-outline-dark">
-                                Ver productos
+                            <a
+                                href="#vehiculos"
+                                class="btn btn-outline-danger"
+                            >
+                                Ver modelos
                             </a>
 
                         </div>
@@ -325,262 +531,270 @@
     </section>
 
 
-    <!-- Sección de productos -->
-    <section id="productos" class="py-5 bg-white">
+    <!-- ============================= -->
+    <!-- VEHÍCULOS DESTACADOS -->
+    <!-- ============================= -->
+
+    <section
+        id="vehiculos"
+        class="py-5 bg-white"
+    >
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold section-title">
+                    Vehículos destacados
+                </h2>
+
+                <p class="text-secondary">
+                    Conoce algunos de nuestros modelos.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- VEHÍCULO 1 -->
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div
+                        class="card h-100 border-0 shadow-sm vehicle-card"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Honda Civic"
+                        >
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span
+                                class="badge bg-danger align-self-start mb-2"
+                            >
+                                DESTACADO
+                            </span>
+
+                            <h3 class="card-title h5">
+                                Honda Civic
+                            </h3>
+
+                            <p class="card-text text-secondary">
+                                Sedán moderno con excelente rendimiento,
+                                tecnología y seguridad.
+                            </p>
+
+                            <div class="mt-auto">
+
+                                <p class="fs-5 fw-bold text-danger">
+                                    Desde $120.000.000
+                                </p>
+
+                                <button
+                                    class="btn btn-honda w-100"
+                                >
+                                    🚗 Solicitar información
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VEHÍCULO 2 -->
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div
+                        class="card h-100 border-0 shadow-sm vehicle-card"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Honda CR-V"
+                        >
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span
+                                class="badge bg-warning text-dark align-self-start mb-2"
+                            >
+                                SUV
+                            </span>
+
+                            <h3 class="card-title h5">
+                                Honda CR-V
+                            </h3>
+
+                            <p class="card-text text-secondary">
+                                SUV espaciosa, cómoda y preparada para
+                                viajes familiares.
+                            </p>
+
+                            <div class="mt-auto">
+
+                                <p class="fs-5 fw-bold text-danger">
+                                    Desde $160.000.000
+                                </p>
+
+                                <button
+                                    class="btn btn-honda w-100"
+                                >
+                                    🚗 Solicitar información
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VEHÍCULO 3 -->
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div
+                        class="card h-100 border-0 shadow-sm vehicle-card"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Honda Accord"
+                        >
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span
+                                class="badge bg-success align-self-start mb-2"
+                            >
+                                CONFORT
+                            </span>
+
+                            <h3 class="card-title h5">
+                                Honda Accord
+                            </h3>
+
+                            <p class="card-text text-secondary">
+                                Elegancia, confort y tecnología para
+                                disfrutar cada viaje.
+                            </p>
+
+                            <div class="mt-auto">
+
+                                <p class="fs-5 fw-bold text-danger">
+                                    Desde $150.000.000
+                                </p>
+
+                                <button
+                                    class="btn btn-honda w-100"
+                                >
+                                    🚗 Solicitar información
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VEHÍCULO 4 -->
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div
+                        class="card h-100 border-0 shadow-sm vehicle-card"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Honda deportivo"
+                        >
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span
+                                class="badge bg-dark align-self-start mb-2"
+                            >
+                                SPORT
+                            </span>
+
+                            <h3 class="card-title h5">
+                                Honda Sport
+                            </h3>
+
+                            <p class="card-text text-secondary">
+                                Diseño deportivo y una experiencia
+                                emocionante al volante.
+                            </p>
+
+                            <div class="mt-auto">
+
+                                <p class="fs-5 fw-bold text-danger">
+                                    Consultar precio
+                                </p>
+
+                                <button
+                                    class="btn btn-honda w-100"
+                                >
+                                    🚗 Solicitar información
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- BENEFICIOS -->
+    <!-- ============================= -->
+
+    <section
+        class="py-5 honda-red text-white"
+    >
 
         <div class="container">
 
             <div class="text-center mb-5">
 
                 <h2 class="fw-bold">
-                    Productos destacados
-                </h2>
-
-                <p class="text-secondary">
-                    Tecnología de calidad al mejor precio.
-                </p>
-
-            </div>
-
-
-            <div class="row g-4">
-
-                <!-- Producto 1 -->
-                <div class="col-sm-6 col-lg-3">
-
-                    <div class="card h-100 shadow-sm border-0">
-
-                        <div class="ratio ratio-4x3">
-
-                            <img
-                                src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/a/z/azure_6k887la_2.jpg"
-                                class="card-img-top object-fit-cover"
-                                alt="Portátil HP"
-                            >
-
-                        </div>
-
-                        <div class="card-body d-flex flex-column">
-
-                            <span class="badge bg-danger align-self-start mb-2">
-                                15% de descuento
-                            </span>
-
-                            <h3 class="card-title h5">
-                                Portátil HP DDS-343Q
-                            </h3>
-
-                            <p class="card-text text-secondary">
-                                1TB SSD, 8GB de memoria RAM, Windows 11 Pro
-                                y un año de Office 365.
-                            </p>
-
-                            <div class="mt-auto">
-
-                                <p class="fs-5 fw-bold text-success">
-                                    $2.500.000
-                                </p>
-
-                                <button class="btn btn-dark w-100">
-                                    🛒 Agregar al carrito
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Producto 2 -->
-                <div class="col-sm-6 col-lg-3">
-
-                    <div class="card h-100 shadow-sm border-0">
-
-                        <div class="ratio ratio-4x3">
-
-                            <img
-                                src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTDl9tlwR-_ZMYwCMCYEWHnsW-KaoeILGXR2pcuvDXx6NQwbIkd1QrEVfwB-kZYled8MsEnMLdWK9hKocadVw9py8T4JcfxijqYHzowkhd61qET1kwEbLfFVkA"
-                                class="card-img-top object-fit-cover"
-                                alt="Monitor portátil"
-                            >
-
-                        </div>
-
-                        <div class="card-body d-flex flex-column">
-
-                            <span class="badge bg-warning text-dark align-self-start mb-2">
-                                20% de descuento
-                            </span>
-
-                            <h3 class="card-title h5">
-                                Monitor portátil 15.6"
-                            </h3>
-
-                            <p class="card-text text-secondary">
-                                Pantalla portátil de alta calidad, ideal para
-                                trabajo, estudio y entretenimiento.
-                            </p>
-
-                            <div class="mt-auto">
-
-                                <p class="fs-5 fw-bold text-success">
-                                    $690.000
-                                </p>
-
-                                <button class="btn btn-dark w-100">
-                                    🛒 Agregar al carrito
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Producto 3 -->
-                <div class="col-sm-6 col-lg-3">
-
-                    <div class="card h-100 shadow-sm border-0">
-
-                        <div class="ratio ratio-4x3">
-
-                            <img
-                                src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT7ZYdwS6mlwhItmOh3p21YNwAMO-m4exzcmnVsmutE5RbDmmjH5QKOXoBsXsU6_2P77aN_jH7AAb_VF8MJzJ-GIVq7AAx_E5DQw-sV-WePmZnDwLQO-x762Q"
-                                class="card-img-top object-fit-cover"
-                                alt="Mouse Logitech"
-                            >
-
-                        </div>
-
-                        <div class="card-body d-flex flex-column">
-
-                            <span class="badge bg-info text-dark align-self-start mb-2">
-                                5% DE DESCUENTO
-                            </span>
-
-                            <h3 class="card-title h5">
-                                Mouse Logitech Gaming
-                            </h3>
-
-                            <p class="card-text text-secondary">
-                                Mouse gaming con retroiluminación, buen agarre
-                                y excelente comodidad.
-                            </p>
-
-                            <div class="mt-auto">
-
-                                <p class="fs-5 fw-bold text-success">
-                                    $90.000
-                                </p>
-
-                                <button class="btn btn-dark w-100">
-                                    🛒 Agregar al carrito
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Producto 4 -->
-                <div class="col-sm-6 col-lg-3">
-
-                    <div class="card h-100 shadow-sm border-0">
-
-                        <div class="ratio ratio-4x3">
-
-                            <img
-                                src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSAyzaNNoKDGlaeIfsL90JeSN9UlgdJl3_tuefMP0KcvJP-dl3WydJtlMbT_lHJxAoMYt91_UF69RHsC94XQLQuigQLJZ77VjlNdOjMhjWxzycwU-g2-eXKZQ"
-                                class="card-img-top object-fit-cover"
-                                alt="Diadema Gaming"
-                            >
-
-                        </div>
-
-                        <div class="card-body d-flex flex-column">
-
-                            <span class="badge bg-primary align-self-start mb-2">
-                                40% DE DESCUENTO
-                            </span>
-
-                            <h3 class="card-title h5">
-                                Diadema Gaming
-                            </h3>
-
-                            <p class="card-text text-secondary">
-                                Excelente acabado, sonido de calidad y
-                                retroiluminación.
-                            </p>
-
-                            <div class="mt-auto">
-
-                                <p class="fs-5 fw-bold text-success">
-                                    $35.000
-                                </p>
-
-                                <button class="btn btn-dark w-100">
-                                    🛒 Agregar al carrito
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Sección de beneficios -->
-    <section class="py-5 bg-primary text-white">
-
-        <div class="container">
-
-            <div class="text-center mb-4">
-
-                <h2 class="fw-bold">
-                    Compra con confianza
+                    ¿Por qué elegir Honda?
                 </h2>
 
                 <p>
-                    Te ofrecemos productos y servicio de calidad.
+                    Calidad, innovación y confianza en cada vehículo.
                 </p>
 
             </div>
 
+
             <div class="row text-center g-4">
-
-                <div class="col-md-4">
-
-                    <div class="fs-1">
-                        🚚
-                    </div>
-
-                    <h3 class="h5">
-                        Envíos
-                    </h3>
-
-                    <p>
-                        Enviamos tus productos de forma rápida y segura.
-                    </p>
-
-                </div>
 
                 <div class="col-md-4">
 
@@ -589,27 +803,48 @@
                     </div>
 
                     <h3 class="h5">
-                        Garantía
+                        Seguridad
                     </h3>
 
                     <p>
-                        Contamos con garantía y soporte para nuestros equipos.
+                        Vehículos diseñados pensando en la seguridad
+                        del conductor y los pasajeros.
                     </p>
 
                 </div>
 
+
                 <div class="col-md-4">
 
                     <div class="fs-1">
-                        👨‍💻
+                        ⚙️
                     </div>
 
                     <h3 class="h5">
-                        Soporte técnico
+                        Tecnología
                     </h3>
 
                     <p>
-                        Te ayudamos a elegir y configurar tus equipos.
+                        Innovación y tecnología para mejorar
+                        tu experiencia de conducción.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="fs-1">
+                        🔧
+                    </div>
+
+                    <h3 class="h5">
+                        Servicio
+                    </h3>
+
+                    <p>
+                        Mantenimiento y atención especializada
+                        para tu vehículo.
                     </p>
 
                 </div>
@@ -621,83 +856,96 @@
     </section>
 
 
-    <!-- Sección nosotros -->
-    <section id="nosotros" class="bg-white py-5">
+    <!-- ============================= -->
+    <!-- NOSOTROS -->
+    <!-- ============================= -->
+
+    <section
+        id="nosotros"
+        class="bg-white py-5"
+    >
 
         <div class="container">
 
-            <div class="row align-items-center g-4">
+            <div class="row align-items-center g-5">
 
                 <div class="col-md-6">
 
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLd-NZxvh9t1QfCwE8EX2682_6J-yAuGAomO_FFsdgWhKXlPglNQbzFws&s=10"
+                        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=80"
                         class="img-fluid rounded shadow"
-                        alt="Tecnología Sureña"
+                        alt="Vehículos Honda"
                     >
 
                 </div>
 
+
                 <div class="col-md-6">
 
                     <h2 class="fw-bold">
-                        Importadores directos y soporte de confianza
+                        Tu próximo Honda está aquí
                     </h2>
 
                     <p class="text-secondary">
-                        En Tecnología Sureña ofrecemos computadores,
-                        accesorios, cámaras de seguridad, impresoras y
-                        diferentes productos tecnológicos.
+                        Somos un concesionario especializado en vehículos
+                        Honda, comprometido con ofrecer una excelente
+                        experiencia de compra y servicio.
                     </p>
 
                     <p class="text-secondary">
-                        Trabajamos para ofrecer buenos precios, productos
-                        de calidad y atención personalizada a nuestros
-                        clientes.
+                        Te ayudamos a encontrar el vehículo que mejor
+                        se adapte a tus necesidades, presupuesto y estilo
+                        de vida.
                     </p>
 
-                    <button class="btn btn-primary">
-                        Conoce nuestros productos
-                    </button>
+                    <a
+                        href="#contacto"
+                        class="btn btn-honda"
+                    >
+                        Contáctanos
+                    </a>
 
                 </div>
 
             </div>
 
 
-            <!-- Por qué elegirnos -->
+            <!-- ¿POR QUÉ ELEGIRNOS? -->
+
             <div class="row mt-5">
 
                 <div class="col-md-8 mx-auto">
 
-                    <div class="card border-0 bg-warning-subtle shadow-sm">
+                    <div
+                        class="card border-0 bg-light shadow-sm"
+                    >
 
                         <div class="card-body p-4">
 
                             <h3 class="h5 fw-bold text-center">
-                                ¿Por qué elegirnos?
+                                Ventajas de comprar con nosotros
                             </h3>
 
                             <ul class="list-group list-group-flush">
 
                                 <li class="list-group-item bg-transparent">
-                                    ✓ Garantía directa
+                                    ✓ Vehículos de calidad
                                 </li>
 
                                 <li class="list-group-item bg-transparent">
-                                    ✓ Soporte técnico
+                                    ✓ Asesoría personalizada
                                 </li>
 
                                 <li class="list-group-item bg-transparent">
-                                    ✓ Precios competitivos
+                                    ✓ Opciones de financiación
                                 </li>
 
                                 <li class="list-group-item bg-transparent">
-                                    ✓ Atención personalizada
+                                    ✓ Servicio y mantenimiento
                                 </li>
 
                                 <li class="list-group-item bg-transparent">
-                                    ✓ Experiencia en tecnología
+                                    ✓ Atención especializada
                                 </li>
 
                             </ul>
@@ -715,30 +963,41 @@
     </section>
 
 
-    <!-- Sección contacto -->
-    <section id="contacto" class="py-5">
+    <!-- ============================= -->
+    <!-- CONTACTO -->
+    <!-- ============================= -->
+
+    <section
+        id="contacto"
+        class="py-5"
+    >
 
         <div class="container">
 
             <div class="text-center">
 
-                <h2 class="fw-bold">
+                <h2 class="fw-bold section-title">
                     Contáctanos
                 </h2>
 
                 <p class="text-secondary">
-                    ¿Tienes alguna pregunta? Estamos para ayudarte.
+                    Estamos listos para ayudarte a encontrar tu próximo Honda.
                 </p>
 
             </div>
 
 
-            <div class="row justify-content-center mt-4 g-4">
+            <div
+                class="row justify-content-center mt-4 g-4"
+            >
 
-                <!-- Dirección -->
+                <!-- DIRECCIÓN -->
+
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-sm h-100 text-center">
+                    <div
+                        class="card border-0 shadow-sm h-100 text-center"
+                    >
 
                         <div class="card-body">
 
@@ -747,7 +1006,7 @@
                             </div>
 
                             <h3 class="h5">
-                                Dirección
+                                Concesionario
                             </h3>
 
                             <p class="mb-0">
@@ -761,10 +1020,13 @@
                 </div>
 
 
-                <!-- Horario -->
+                <!-- HORARIO -->
+
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-sm h-100 text-center">
+                    <div
+                        class="card border-0 shadow-sm h-100 text-center"
+                    >
 
                         <div class="card-body">
 
@@ -791,10 +1053,13 @@
                 </div>
 
 
-                <!-- Teléfono -->
+                <!-- TELÉFONO -->
+
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-sm h-100 text-center">
+                    <div
+                        class="card border-0 shadow-sm h-100 text-center"
+                    >
 
                         <div class="card-body">
 
@@ -819,17 +1084,22 @@
             </div>
 
 
-            <!-- Formulario -->
+            <!-- FORMULARIO -->
+
             <div class="row justify-content-center mt-5">
 
                 <div class="col-md-8">
 
-                    <div class="card shadow-sm border-0">
+                    <div
+                        class="card shadow-sm border-0"
+                    >
 
                         <div class="card-body p-4">
 
-                            <h3 class="h4 fw-bold mb-4 text-center">
-                                Envíanos un mensaje
+                            <h3
+                                class="h4 fw-bold mb-4 text-center"
+                            >
+                                Solicita información
                             </h3>
 
                             <form>
@@ -875,6 +1145,64 @@
                                 <div class="mb-3">
 
                                     <label
+                                        for="telefono"
+                                        class="form-label"
+                                    >
+                                        Teléfono
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="telefono"
+                                        placeholder="300 000 0000"
+                                    >
+
+                                </div>
+
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="modelo"
+                                        class="form-label"
+                                    >
+                                        Modelo de interés
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="modelo"
+                                    >
+
+                                        <option selected>
+                                            Selecciona un modelo
+                                        </option>
+
+                                        <option>
+                                            Honda Civic
+                                        </option>
+
+                                        <option>
+                                            Honda CR-V
+                                        </option>
+
+                                        <option>
+                                            Honda Accord
+                                        </option>
+
+                                        <option>
+                                            Otro modelo
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="mb-3">
+
+                                    <label
                                         for="mensaje"
                                         class="form-label"
                                     >
@@ -885,7 +1213,7 @@
                                         class="form-control"
                                         id="mensaje"
                                         rows="4"
-                                        placeholder="Escribe tu mensaje"
+                                        placeholder="¿Qué vehículo estás buscando?"
                                     ></textarea>
 
                                 </div>
@@ -893,9 +1221,9 @@
 
                                 <button
                                     type="submit"
-                                    class="btn btn-primary w-100"
+                                    class="btn btn-honda w-100"
                                 >
-                                    Enviar mensaje
+                                    🚗 Enviar solicitud
                                 </button>
 
                             </form>
@@ -913,21 +1241,26 @@
     </section>
 
 
-    <!-- Pie de página -->
-    <footer class="bg-dark text-white text-center py-4">
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer
+        class="bg-dark text-white text-center py-4"
+    >
 
         <div class="container">
 
-            <p class="mb-1 fw-bold">
-                💻 Tecnología Sureña
+            <p class="mb-1 fw-bold fs-5">
+                🚗 HONDA MOTORS
             </p>
 
             <p class="mb-0 text-white-50">
-                Productos de informática, tecnología y soporte técnico.
+                Vehículos, tecnología y servicio automotriz.
             </p>
 
             <p class="mb-0 text-white-50 mt-2">
-                © 2026 Tecnología Sureña - Todos los derechos reservados.
+                © 2026 Honda Motors - Todos los derechos reservados.
             </p>
 
         </div>
@@ -936,9 +1269,9 @@
 
 
     <!-- Bootstrap JavaScript -->
+
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
 
 </body>
-</html>
