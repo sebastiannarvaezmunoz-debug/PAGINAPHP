@@ -1,3 +1,9 @@
+@extends('layouts.app')
+ 
+@section('titulo', 'Inicio')
+ 
+@section('contenido')
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -1275,3 +1281,5 @@
     </script>
 
 </body>
+
+@endsection
