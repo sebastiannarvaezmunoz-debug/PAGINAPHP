@@ -116,7 +116,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-cafe shadow-sm">
         <div class="container py-2">
-            <a class="navbar-brand fw-bold" href="{{ route('inicio') }}">
+            <a class="navbar-brand fw-bold" href="{{ route('welcome') }}">
                 <i class="bi bi-cup-hot-fill me-2"></i>
                 🏍️Honda Motors🏍️
             </a>
@@ -137,10 +137,19 @@
                 <ul class="navbar-nav ms-auto gap-lg-1">
                     <li class="nav-item">
                         <a
-                            class="nav-link {{ request()->routeIs('inicio') ? 'active' : '' }}"
-                            href="{{ route('inicio') }}"
+                            class="nav-link {{ request()->routeIs('welcome') ? 'active' : '' }}"
+                            href="{{ route('welcome') }}"
                         >
                             Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link {{ request()->routeIs('formulario') ? 'active' : '' }}"
+                            href="{{ route('formulario') }}"
+                        >
+                            formulario
                         </a>
                     </li>
  
