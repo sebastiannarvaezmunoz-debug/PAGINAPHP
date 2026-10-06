@@ -161,6 +161,15 @@
                             Menú
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link {{ request()->routeIs('menu') ? 'active' : '' }}"
+                            href="{{ route('clientes.index') }}"
+                        >
+                            Datos
+                        </a>
+                    </li>
  
                     <li class="nav-item">
                         <a
