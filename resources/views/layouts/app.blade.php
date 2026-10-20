@@ -137,19 +137,10 @@
                 <ul class="navbar-nav ms-auto gap-lg-1">
                     <li class="nav-item">
                         <a
-                            class="nav-link {{ request()->routeIs('welcome') ? 'active' : '' }}"
-                            href="{{ route('welcome') }}"
+                            class="nav-link {{ request()->routeIs('inicio') ? 'active' : '' }}"
+                            href="welcome"
                         >
                             Inicio
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link {{ request()->routeIs('clientes.index') ? 'active' : '' }}"
-                            href="{{ route('clientes.index') }}"
-                        >
-                            INDEX
                         </a>
                     </li>
  
@@ -161,13 +152,12 @@
                             Menú
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a
-                            class="nav-link {{ request()->routeIs('menu') ? 'active' : '' }}"
+                            class="nav-link {{ request()->routeIs('clientes.index') ? 'active' : '' }}"
                             href="{{ route('clientes.index') }}"
                         >
-                            Datos
+                            Clientes
                         </a>
                     </li>
  
@@ -176,7 +166,7 @@
                             class="nav-link {{ request()->routeIs('nosotros') ? 'active' : '' }}"
                             href="{{ route('nosotros') }}"
                         >
-                            Nosotros
+                            nosotros
                         </a>
                     </li>
  
@@ -185,7 +175,15 @@
                             class="nav-link {{ request()->routeIs('contacto') ? 'active' : '' }}"
                             href="{{ route('contacto') }}"
                         >
-                            Contacto
+                            contacto
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a
+                            class="nav-link {{ request()->routeIs('producto.index') ? 'active' : '' }}"
+                            href="{{ route('producto.index') }}"
+                        >
+                            productos
                         </a>
                     </li>
                 </ul>
@@ -199,7 +197,7 @@
  
     <footer class="text-white text-center py-4">
         <div class="container">
-            <p class="mb-1 fw-semibold">Café Aroma</p>
+            <p class="mb-1 fw-semibold">Kawasaki Motorcycles</p>
             <p class="mb-0 small text-white-50">
                 Laboratorio de vistas y rutas en Laravel 12
             </p>
