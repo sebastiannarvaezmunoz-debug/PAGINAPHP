@@ -9,18 +9,22 @@ use Illuminate\View\View;
 
 class ClienteController extends Controller
 {
-    public function index(): View
+    // Funcion para consulta de datos de una vista a la basde de datos
+        public function index(): View
     {
         $clientes = Cliente::latest()->get();
 
         return view('clientes.index', compact('clientes'));
     }
-
-    public function create(): View
+    
+    // Funcion acceder a una vista
+        public function create(): View
     {
         return view('clientes.create');
     }
 
+ 
+    // Funcion para guardar datos del formulario
     public function store(Request $request): RedirectResponse
     {
         $datos = $request->validate([
@@ -38,3 +42,4 @@ class ClienteController extends Controller
             ->with('exito', 'Cliente registrado correctamente.');
     }
 }
+ 
