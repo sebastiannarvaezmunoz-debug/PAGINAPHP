@@ -47,6 +47,7 @@
                                 <td>{{ $cliente->ciudad }}</td>
                                 <td>{{ $cliente->mensaje }}</td>
                                 <td>{{ $cliente->created_at->format('d/m/Y H:i') }}</td>
+                            <a href="{{ route('clientes.edit', $cliente) }}" class="btn btn-warning btn-sm">Editar</a>
                             </tr>
                         @empty
                             <tr>
